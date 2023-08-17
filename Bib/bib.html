@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="Cadastro de Livros">Cadastro de Livros</h1>
+    <input id="nomeLivro"plancehoIder="Nome"type="text">
+    <input id="autorLivro"plancehoIder="Autor"type="text">
+    <input id="anoLivro"plancehoIder="Ano"type="number">
+    <button onclick="adicionar()">adicionar Livro</button>
+    <button onclick="mostrarLivros()">Mostrar</button>
+
+    <div class="carrosel">
+        <img id="carroselImagem" src="" alt="imagem do carrosel">
+        <button id="anterior">Anterior</button>
+        <button id="proxima">Proxima</button>
+    </div>
+    <script>
+        let biblioteca = [];
+        function Cadastro(nome, autor,ano) {
+            var Livro = {
+                titulo: nome,
+                autor: autor,
+                ano:ano
+            };
+            biblioteca.push(Livro)
+        }
+        function adicionar(){
+            let nome = document.getElementById('nomeLivro').value;
+            let autor= document.getElementById('autorLivro').value;
+            let ano = document. getElementById('anoLivro').value;
+            Cadastro(nome, autor, ano);
+        }
+        function mostrarLivros() {
+            console.log('resultado:${biblioteca[0].titulo}');
+        }
+
+        let imgIndice = 0;
+        const IMAGENS = ['imgLivro1.png','imgLivro2.png','imgLivro3.png','imgLivro4.png'];
+        const prevButton = document.getElementById('anterior');
+        const nextButton = document.getElementById('proxima');
+
+        var IMG=document.getElementById('carroselImagem');
+
+        function carregar() {
+            IMG.src = IMAGENS[imgIndice];
+        }
+        
+        prevButton.addEventListener('click', () => {
+            --imgIndice
+            //imgIndice = imgIndice - 1;
+            carregar();
+        });
+        
+        nextButton.addEventListener('click', () => {
+            var Limite=(IMAGENS.length)-1
+            if (imgIndice < Limite) {
+                ++imgIndice
+                //imgIndice = imgIndice + 1;
+                carregar();
+            }
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+body, h1, p, input, button {
+    margin: 7px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #6abcceed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+h1 {
+    margin-bottom: 45px;
+}
+
+.container {
+    width: 300px;
+    padding: 30px;
+    background-color: hsl(313, 100%, 51%);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 800px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 15px 35px;
+    background-color: #2403a6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#carousel {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#livroInfo, #quantidadeLivros {
+    margin-top: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    color: #080000;
+}
+ 
+  
